@@ -1,0 +1,38 @@
+# Checking for opened and closed braces 
+
+import sys
+
+# Checking for correct argument quantity
+if len(sys.argv) != 2:
+    print("enter one argument")
+    exit(1)
+
+stroka = list(sys.argv[1])
+
+i = 0
+while len(stroka) >= i+1:
+    print("hello")
+    if stroka[0] == ")":
+        print("No")
+        exit(1)
+    else:
+        del stroka[0]
+        indi = 0
+        while indi <= len(stroka)+1:
+            print(stroka)
+            if stroka[indi] == ")":
+                del stroka[indi]
+                print(stroka)
+                break
+            print(i)
+            indi += 1
+    i = i + 1
+
+
+if len(stroka) == 0:
+    print("yes")
+else:
+    print("no")
+
+
+
