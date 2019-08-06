@@ -1,0 +1,10 @@
+# Checking for palindrom
+
+import sys
+arg = str.lower(sys.argv[1])
+gra = arg[::-1]
+print(gra)
+if arg == gra:
+    print("yes")
+else:
+    print("No")
