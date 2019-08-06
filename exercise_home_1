@@ -1,0 +1,19 @@
+# Argument equals to Fibonacci index number
+
+import sys
+# Checking for length of list
+if len(sys.argv) != 2:
+    print("enter one number")
+    exit(1)
+
+# Checking for integer value    
+try:
+    number = int(sys.argv[1])
+except ValueError: 
+    print("is not integer")
+
+# Fibonacci
+fibonacci = [0,1]
+while len(fibonacci) < number+1:
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+print(fibonacci[number])
